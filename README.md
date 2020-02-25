@@ -47,4 +47,4 @@ Setup *dev.env*  for dev enviroment and *prod.env* for publish.
 - LOGIN_PATH - path to auth server
 - HOST - front path (for dev server should be on 4000 port)
 
-run *npm install* for setup and *npm run-script server for dev startup*
+run *npm install* for setup and *npm run-script server* for dev startup
