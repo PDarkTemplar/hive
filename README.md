@@ -34,7 +34,7 @@ There is some IR codes in database:
 Node-RED example folder with modules.  
 
 For instalation use 
-*npm install *
+*npm install*
 
 For startup
 *node "{path}/node_modules/node-red/red.js" --userDir "{path}/node_red_with_modules"*
