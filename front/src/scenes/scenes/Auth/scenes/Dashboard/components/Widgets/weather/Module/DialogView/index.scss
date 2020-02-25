@@ -1,0 +1,26 @@
+@import 'functions.scss';
+
+.wrap {
+    margin: calculate-rem(20);
+    min-height: 0;
+    display: flex;
+    flex: 1 1 auto;
+}
+
+div.module {
+    padding: calculate-rem(2) calculate-rem(8);
+    position: relative;
+    z-index: 0;
+    height: calculate-rem(200);
+}
+
+.tabs {
+    display: flex;
+    flex-flow: column;
+    flex: 1 1 auto;
+}
+
+
+.panel {
+    overflow-y: auto;
+}

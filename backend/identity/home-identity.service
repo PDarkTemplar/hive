@@ -1,0 +1,17 @@
+[Unit]
+Description=Home-Identity
+After=syslog.target network.target
+
+
+[Service]
+ExecStart=/usr/bin/node /home-automation/identity/identity.build.js
+Type=simple
+User=home-automation
+Group=home-automation
+SyslogIdentifier=Home-Identity
+StandardOutput=syslog
+Restart=on-failure
+KillSignal=SIGINT
+
+[Install]
+WantedBy=multi-user.target

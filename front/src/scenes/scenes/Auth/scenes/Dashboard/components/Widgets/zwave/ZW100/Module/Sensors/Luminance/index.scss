@@ -1,0 +1,50 @@
+@import 'functions.scss';
+@import 'colors.scss';
+
+.icon {
+    width: calculate-rem(56);
+    height: calculate-rem(56);
+    fill: $light-gray4;
+    transition: opacity 0.5s linear;
+    opacity: 0;
+    position: absolute;
+}
+
+.icon-small {
+    width: calculate-rem(32);
+    height: calculate-rem(32);
+}
+
+.wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sun {
+    transform-origin: 50% 50%;
+    transition: transform 0.3s linear;
+}
+
+.hide {
+    opacity: 0;
+}
+
+.show {
+    opacity: 1;
+}
+
+.icon-wrap {
+    position: relative;
+    width: calculate-rem(56);
+    height: calculate-rem(56);
+    margin-right: calculate-rem(10);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon-wrap-small {
+    width: calculate-rem(32);
+    height: calculate-rem(32);
+}

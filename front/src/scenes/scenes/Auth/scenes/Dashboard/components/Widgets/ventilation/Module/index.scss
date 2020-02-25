@@ -1,0 +1,71 @@
+@import 'functions.scss';
+@import 'colors.scss';
+
+.wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slider-wrap {
+    display: flex;
+    flex-flow: column;
+}
+
+.icon {
+    width: calculate-rem(76);
+    height: calculate-rem(76);
+    fill: $light-gray4;
+}
+
+.icon-small {
+    width: calculate-rem(42);
+    height: calculate-rem(42);
+}
+
+.ventilator {
+    animation: spin linear infinite;
+    transform-origin: center 49%;   
+}
+
+.inner-wrap {
+    margin-left: calculate-rem(14);
+}
+
+.power {
+    margin-right: calculate-rem(10);
+    margin-top: calculate-rem(10);
+    margin-bottom: calculate-rem(10);
+}
+
+.button-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.speed {
+    margin-right: calculate-rem(10);
+}
+
+.temperature {
+    margin-left: calculate-rem(10);
+}
+
+.speed-small {
+    margin: calculate-rem(10) 0;
+}
+
+.temperature-small {
+    margin: calculate-rem(10) 0;
+    margin-top: 0;
+}
+
+.inner-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+}
+
+@keyframes spin { 100% {transform:rotate(360deg); } }

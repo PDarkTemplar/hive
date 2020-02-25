@@ -1,0 +1,26 @@
+@import 'functions.scss';
+
+.wrap {
+    padding: calculate-rem(14);
+    display: flex;
+    flex-flow: column;
+    overflow-y: auto;
+}
+
+.name-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1 1 auto;
+}
+
+.settings-wrap {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.row {
+    flex: 1 0 0;
+    min-width: calculate-rem(250);
+    padding: 0 calculate-rem(4);
+}

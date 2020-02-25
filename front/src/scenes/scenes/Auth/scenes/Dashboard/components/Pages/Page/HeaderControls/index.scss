@@ -1,0 +1,25 @@
+@import 'functions.scss';
+
+.menu {
+    display: flex;
+    flex-wrap: nowrap;
+
+    & > * {
+        margin-right: calculate-rem(10);
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+}
+
+.wrap {
+    display: flex;
+    flex-wrap: nowrap;
+
+    & > * {
+        margin-right: calculate-rem(24);
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+}

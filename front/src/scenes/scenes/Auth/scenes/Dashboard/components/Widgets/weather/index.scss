@@ -1,0 +1,7 @@
+@import 'functions.scss';
+@import 'colors.scss';
+
+.add-icon {
+    flex: 0 0 auto;
+    @include icon('sun.svg', 22, 22, $light-gray4);
+}

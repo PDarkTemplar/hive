@@ -1,0 +1,17 @@
+[Unit]
+Description=Home-Broker
+After=syslog.target network.target
+
+
+[Service]
+ExecStart=/usr/bin/node /home-automation/broker/broker.build.js
+Type=simple
+User=home-automation
+Group=home-automation
+SyslogIdentifier=Home-Broker
+StandardOutput=syslog
+Restart=on-failure
+KillSignal=SIGINT
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,50 @@
+@import 'functions.scss';
+@import 'colors.scss';
+
+.icon {
+    margin-bottom: calculate-rem(14);
+}
+
+.i00861a020064 {
+    @include icon('nodes/multi-sensor.svg', 44, 44, $light-gray4);
+}
+
+.i010f01024000 {
+    @include icon('nodes/dimmer.svg', 44, 44, $light-gray4);
+}
+
+.i010f03024000 {
+    @include icon('nodes/blinds.svg', 44, 44, $light-gray4);
+}
+
+.i010f04024002 {
+    @include icon('nodes/switch.svg', 44, 44, $light-gray4);
+}
+
+.i019b00010001 {
+    @include icon('nodes/underfloor-heating.svg', 44, 44, $light-gray4);
+}
+
+.i00020115a010 {
+    @include icon('nodes/radiator.svg', 44, 44, $light-gray4);
+}
+
+.i010f02034000 {
+    @include icon('nodes/double-switch.svg', 44, 44, $light-gray4);
+}
+
+.i025800032082 {
+    @include icon('nodes/open-door.svg', 44, 44, $light-gray4);
+}
+
+.i013c00010010 {
+    @include icon('nodes/valve.svg', 44, 44, $light-gray4);
+}
+
+.i025800032085 {
+    @include icon('nodes/leakage.svg', 44, 44, $light-gray4);
+}
+
+.i013c0002001e {
+    @include icon('nodes/fire-alarm.svg', 44, 44, $light-gray4);
+}

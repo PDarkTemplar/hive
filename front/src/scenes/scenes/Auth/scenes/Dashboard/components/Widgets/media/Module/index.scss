@@ -1,0 +1,109 @@
+@import 'functions.scss';
+@import 'colors.scss';
+
+.wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon.off {
+    @include icon('power.svg', 76, 76, $light-gray4);
+}
+
+.icon.pc {
+    @include icon('computer.svg', 76, 76, $light-gray4);
+}
+
+.icon.server {
+    @include icon('server.svg', 76, 76, $light-gray4);
+}
+
+.icon-small.off {
+    @include icon('power.svg', 42, 42, $light-gray4);
+}
+
+.icon-small.pc {
+    @include icon('computer.svg', 42, 42, $light-gray4);
+}
+
+.icon-small.server {
+    @include icon('server.svg', 42, 42, $light-gray4);
+}
+
+.tv-on {
+     @include icon('tv.svg', 16, 16, $light-gray4);
+}
+
+.tv-off {
+     @include icon('tv-off.svg', 16, 16, $light-gray4);
+}
+
+
+.volume-buttons {
+    margin: calculate-rem(14) 0;
+      & > .button {
+         margin-right: calculate-rem(14);
+         &:last-child {
+             margin-right: 0 ;
+         }
+    }
+}
+
+.tv-buttons {
+    margin: calculate-rem(14) 0;
+     button {
+         margin-right: calculate-rem(14);
+
+         &:last-child {
+             margin-right: 0;
+         }
+     }
+}
+
+
+.buttons {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    margin-right: calculate-rem(20);
+}
+
+
+.icon {
+    width: calculate-rem(76);
+    height: calculate-rem(76);
+}
+
+.icon-small {
+    width: calculate-rem(42);
+    height: calculate-rem(42);
+}
+
+
+.inner-wrap {
+    margin-left: calculate-rem(14);
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row;
+}
+
+button.button {
+    padding: calculate-rem(10)  calculate-rem(16);
+}
+
+.right {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+
+    button {
+        margin-bottom: calculate-rem(14);
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}

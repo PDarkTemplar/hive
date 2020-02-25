@@ -1,0 +1,48 @@
+@import 'functions.scss';
+@import 'colors.scss';
+
+.icon {
+    width: calculate-rem(86);
+    height: calculate-rem(86);
+    fill: $light-gray4;
+}
+
+.icon-small {
+    width: calculate-rem(42);
+    height: calculate-rem(42);
+}
+
+.wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.active .person {
+    animation: flickerAnimation 1.5s infinite;
+    animation-timing-function: ease-in-out;
+}
+
+.active .inner {
+    animation: flickerAnimation 1s infinite;
+    animation-delay: 100ms;
+    animation-timing-function: ease-in-out;
+}
+
+.active .outer {
+    animation: flickerAnimation 1s infinite;
+    animation-delay: 200ms;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes flickerAnimation {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}

@@ -1,0 +1,37 @@
+@import 'functions.scss';
+
+.dialog {
+    min-width: calculate-rem(250);
+    min-height: calculate-rem(250);
+}
+
+.content-wrap {
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+    flex: 1 1 auto;
+    padding: calculate-rem(10);
+    padding-bottom: 0;
+}
+
+.button-wrap {
+    text-align: right;
+}
+
+.content {
+    display: flex;
+    flex: 1 1 auto;
+    flex-flow: row wrap;
+}
+
+div.widget-animation {
+    div {
+        transition: transform 0.5s;
+    }
+
+    &:hover div {
+        transform: scale(1.1, 1.1);
+    }
+
+    padding: calculate-rem(40);
+}

@@ -1,0 +1,53 @@
+@import 'functions.scss';
+@import 'colors.scss';
+
+.wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button-wrap {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 calculate-rem(12);
+}
+
+.icon {
+    width: calculate-rem(76);
+    height: calculate-rem(76);
+    stroke: $light-gray4;
+    fill: $light-gray4;
+}
+
+.icon-small {
+    width: calculate-rem(42);
+    height: calculate-rem(42);
+}
+
+div:global(.bp3-slider.bp3-vertical).slider {
+    height: calculate-rem(100);
+    margin-right: calculate-rem(10);
+}
+
+.blind {
+    transition: transform 0.3s linear;
+    transform-origin: center 12.55%;
+}
+
+.position {
+    margin-left: calculate-rem(12);
+}
+
+.up-down-wrap {
+    margin-bottom: calculate-rem(12);
+
+    & > * {
+        margin-right: calculate-rem(12);
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+}

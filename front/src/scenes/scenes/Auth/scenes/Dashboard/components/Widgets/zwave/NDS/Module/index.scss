@@ -1,0 +1,33 @@
+@import 'functions.scss';
+@import 'colors.scss';
+
+.icon {
+    width: calculate-rem(76);
+    height: calculate-rem(76);
+    position: absolute;
+    opacity: 0;
+    transition: opacity 0.3s linear, fill 0.3s linear, stroke 0.3s linear;
+}
+
+.icon-small {
+    width: calculate-rem(42);
+    height: calculate-rem(42);
+}
+
+.icon-open {
+    stroke: $red3;
+    fill: $red3;
+}
+
+.icon-closed {
+    stroke: $light-gray4;
+    fill: $light-gray4;
+}
+
+.open {
+    opacity: 1;
+}
+
+.closed {
+    opacity: 1;
+}

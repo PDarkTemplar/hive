@@ -1,0 +1,26 @@
+@import 'functions.scss';
+
+.wrap {
+    display: flex;
+    flex: 1 1 auto;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+}
+
+.card {
+    width: calculate-rem(340);
+    z-index: 1;
+}
+
+.button {
+    margin-top: calculate-rem(40);
+}
+
+.logo-text {
+    margin-bottom: calculate-rem(24);
+    background-image: url('~src/assets/logo-text.png');
+    background-repeat: no-repeat;
+    width: calculate-rem(164);
+    height: calculate-rem(50);
+}

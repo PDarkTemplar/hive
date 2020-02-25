@@ -1,0 +1,27 @@
+@import 'functions.scss';
+@import 'colors.scss';
+
+.dot {
+    border-radius: 50%;
+    height: calculate-rem(6);
+    width: calculate-rem(6);
+    background: $gray1;
+    margin-right: calculate-rem(10);
+    transition: background-color 0.3s linear;
+    cursor: pointer;
+
+    &:last-child {
+        margin-right: 0;
+    }
+}
+
+.dot-active {
+    background: $blue4;
+}
+
+.dots-wrap {
+    display: flex;
+    margin-bottom: calculate-rem(12);
+    margin-top: calculate-rem(12);
+    justify-content: center;
+}

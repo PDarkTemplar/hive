@@ -1,0 +1,5 @@
+{
+    "wsPort": 3002,
+    "mqPort": 1883,
+    "mongoUrl": "mongodb://localhost:27017/mqtt"
+}

@@ -1,0 +1,14 @@
+{
+    "name": "HIVE: Home Automation",
+    "background_color": "#202b33",
+    "icons": [
+      {
+        "src": "/static/images/icon.png",
+        "sizes": "128x128",
+        "type": "image/png",
+        "density": 1.0
+      }
+    ],
+    "display": "fullscreen",
+    "orientation": "any"
+  }

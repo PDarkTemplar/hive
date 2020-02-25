@@ -1,0 +1,43 @@
+@import 'functions.scss';
+@import 'colors.scss';
+
+.icon {
+    width: calculate-rem(76);
+    height: calculate-rem(76);
+    stroke: $light-gray4;
+    fill: $light-gray4;
+}
+
+.active {
+    stroke: $red3;
+    fill: $red3;
+}
+
+.icon-small {
+    width: calculate-rem(42);
+    height: calculate-rem(42);
+}
+
+.active .inner {
+    animation: flickerAnimation 1s infinite;
+    animation-delay: 100ms;
+    animation-timing-function: ease-in-out;
+}
+
+.active .outer {
+    animation: flickerAnimation 1s infinite;
+    animation-delay: 200ms;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes flickerAnimation {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}

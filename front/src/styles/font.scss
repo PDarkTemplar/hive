@@ -1,0 +1,5 @@
+@import 'functions.scss';
+
+@mixin font-m {
+    font-size: calculate-rem(16);
+}

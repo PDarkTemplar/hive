@@ -1,0 +1,56 @@
+@import 'functions.scss';
+@import 'colors.scss';
+@import 'font.scss';
+
+.wrap {
+    display: flex;
+    flex-flow: row;
+    margin-bottom: calculate-rem(15);
+}
+
+.tab {
+    cursor: pointer;
+    flex: 1 1 auto;
+    padding: calculate-rem(6);
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    background: linear-gradient(to bottom, $dark-gray5 0%, $dark-gray2 100%);
+    border-bottom: $dark-gray4 calculate-rem(1) solid;
+    &:first-child {
+        border-left: $dark-gray4 calculate-rem(1) solid;
+        border-right: $dark-gray5 calculate-rem(1) solid;
+        border-bottom-left-radius: calculate-rem(6);
+    }
+    &:last-child {
+        border-right: $dark-gray4 calculate-rem(1) solid;
+        border-left: $dark-gray2 calculate-rem(1) solid;
+        border-bottom-right-radius: calculate-rem(6);
+    }
+
+    transition: transform 100ms;
+}
+
+.active {
+    background: linear-gradient(to bottom, $blue4 0%, $blue1 100%);
+    z-index: 1;
+
+    .name {
+        color: $light-gray4;
+    }
+}
+
+.active-left {
+    border-bottom-right-radius: calculate-rem(6);
+    transform: translateX(3%) translateY(calculate-rem(2)) scale(1.06);
+}
+
+.active-right {
+    border-bottom-left-radius: calculate-rem(6);
+    transform: translateX(-3%) translateY(calculate-rem(2)) scale(1.06);
+}
+
+.name {
+    margin-left: calculate-rem(14);
+    @include font-m();
+}

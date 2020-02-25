@@ -1,0 +1,216 @@
+@import 'functions.scss';
+@import 'colors.scss';
+
+.icon {
+    fill: $light-gray4;
+    width: calculate-rem(76);
+    height: calculate-rem(76);
+}
+
+
+.sun {
+    animation: sun 3s infinite;
+    animation-timing-function: ease-in-out;
+    animation-direction: alternate;
+    transform-origin: 50% 50%; 
+}
+
+.night {
+    animation: night 3s infinite;
+    animation-timing-function: ease-in-out;
+    animation-direction: alternate;
+    transform-origin: 50% 50%; 
+}
+
+.fog1 {
+    animation: fog 3s infinite;
+    animation-timing-function: ease-in-out;
+    animation-direction: alternate;
+}
+
+.fog2 {
+    animation: fog 3s infinite;
+    animation-timing-function: ease-in-out;
+    animation-direction: alternate;
+    animation-delay: 1s;
+}
+
+.fog3 {
+    animation: fog 3s infinite;
+    animation-timing-function: ease-in-out;
+    animation-direction: alternate;
+    animation-delay: 2s;
+}
+
+.cloud-day {
+    animation: cloudSun 3s infinite;
+    animation-timing-function: ease-in-out;
+    animation-direction: alternate;
+    transform-origin: 50% 50%; 
+}
+
+.rain1 {
+    animation: rain 0.5s infinite;
+    animation-timing-function: ease-in-out;
+}
+
+.rain2 {
+    animation: rain 0.5s infinite;
+    animation-timing-function: ease-in-out;
+    animation-delay: 0.2s;
+}
+
+.rain3 {
+    animation: rain 0.5s infinite;
+    animation-timing-function: ease-in-out;
+    animation-delay: 0.3s;
+}
+
+
+.sleet1 {
+    animation: sleet 0.5s infinite;
+    animation-timing-function: ease-in-out;
+}
+
+.sleet2 {
+    animation: sleet 0.5s infinite;
+    animation-timing-function: ease-in-out;
+    animation-delay: 0.2s;
+}
+
+.sleet3 {
+    animation: sleet 0.5s infinite;
+    animation-timing-function: ease-in-out;
+    animation-delay: 0.3s;
+}
+
+.snow1 {
+    animation: snow 1.8s infinite;
+    animation-timing-function: ease-in-out;
+}
+
+.snow2 {
+    animation: snow 1.6s infinite;
+    animation-timing-function: ease-in-out;
+    animation-delay: 0.3s;
+}
+
+.snow3 {
+    animation: snow 1.7s infinite;
+    animation-timing-function: ease-in-out;
+    animation-delay: 0.1s;
+}
+
+.snow4 {
+    animation: snow 1.3s infinite;
+    animation-timing-function: ease-in-out;
+    animation-delay: 0.2s;
+}
+
+.snow5 {
+    animation: snow 1.5s infinite;
+    animation-timing-function: ease-in-out;
+    animation-delay: 0.4s;
+}
+
+.snow6 {
+    animation: snow 1.2s infinite;
+    animation-timing-function: ease-in-out;
+    animation-delay: 0.4s;
+}
+
+.wind {
+  stroke-dasharray: 100;
+  animation: wind 30s linear infinite;
+  fill: none;
+  stroke: $light-gray4;
+}
+
+@keyframes wind {
+    to {
+      stroke-dashoffset: 1000;
+    }
+  }
+
+@keyframes fog {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes snow {
+    0% {
+        transform: translateY(0) translateX(3px);
+        opacity: 1;
+    }
+    50% {
+        transform: translateX(-3px);
+    }
+    100% {
+        transform: translateY(100px) translateX(3px);
+        opacity: 0;
+    }
+}
+
+@keyframes sleet {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+}
+
+@keyframes rain {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+}
+
+
+@keyframes sun {
+    0% {
+        transform: rotateZ(90deg) scale(1, 1);
+    }
+    50% {
+        transform: rotateZ(0deg) scale(0.9, 0.9);
+    }
+    100% {
+        transform: rotateZ(90deg) scale(1, 1);
+    }
+}
+
+
+@keyframes cloudSun {
+    0% {
+        transform: scale(1, 1);
+    }
+    50% {
+        transform: scale(0.7, 0.7);
+    }
+    100% {
+        transform: scale(1, 1);
+    }
+}
+
+@keyframes night {
+    0% {
+        transform: rotateZ(0deg);
+    }
+    50% {
+        transform: rotateZ(-5deg);
+    }
+    100% {
+        transform: rotateZ(0deg);
+    }
+}

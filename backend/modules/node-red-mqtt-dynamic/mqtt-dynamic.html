@@ -1,0 +1,144 @@
+<script type="text/x-red" data-template-name="mqtt in dynamic">
+    <div class="form-row">
+        <label for="node-input-broker"><i class="fa fa-globe"></i> <span> broker</span></label>
+        <input type="text" id="node-input-broker">
+    </div>
+	<div class="form-row">
+        <label for="node-input-topic"><i class="fa fa-tasks"></i> <span> topic</span></label>
+        <input type="text" id="node-input-topic" data-i18n="[placeholder]common.label.topic">
+    </div>
+    <div class="form-row">
+        <label for="node-input-qos"><i class="fa fa-empire"></i> <span> qos</span></label>
+        <select id="node-input-qos" style="width:125px !important">
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+        </select>
+    </div>
+    <div class="form-row">
+        <label for="node-input-name"><i class="fa fa-tag"></i> <span data-i18n="common.label.name"> name</span></label>
+        <input type="text" id="node-input-name" data-i18n="[placeholder]common.label.name">
+    </div>
+</script>
+
+<script type="text/x-red" data-help-name="mqtt in dynamic">
+<p>Connects to a MQTT broker and subscribes to messages from the specified topic.</p>
+    <h3>Outputs</h3>
+    <dl class="message-properties">
+       <dt>payload <span class="property-type">string | buffer</span></dt>
+       <dd>a string unless detected as a binary buffer.</dd>
+       <dt>topic <span class="property-type">string</span></dt>
+       <dd>the MQTT topic, uses / as a hierarchy separator.</dd>
+       <dt>qos <span class="property-type">number</span> </dt>
+       <dd>0, fire and forget - 1, at least once - 2, once and once only.</dd>
+       <dt>retain <span class="property-type">boolean</span></dt>
+       <dd>true indicates the message was retained and may be old.</dd>
+    </dl>
+    <h3>Details</h3>
+    The subscription topic can include MQTT wildcards, + for one level, # for multiple levels.</p>
+    <p>This node requires a connection to a MQTT broker to be configured. This is configured by clicking
+    the pencil icon.</p>
+    <p>Several MQTT nodes (in or out) can share the same broker connection if required.</p>
+</script>
+
+<script type="text/javascript">
+    RED.nodes.registerType('mqtt in dynamic',{
+        category: 'input',
+        defaults: {
+            topic: {value:"",validate: RED.validators.regex(/^(#$|(\+|[^+#]*)(\/(\+|[^+#]*))*(\/(\+|#|[^+#]*))?$)/)},
+            qos: {value: ""},
+            name: {value:""},
+            broker: {type:"mqtt-broker", required:true}
+        },
+        color:"#d8bfd8",
+        inputs:1,
+        outputs:1,
+        icon: "bridge.png",
+        label: function() {
+            return this.name||"mqtt dynamic";
+        },
+        labelStyle: function() {
+            return this.name?"node_label_italic":"";
+        },
+    });
+</script>
+
+<script type="text/x-red" data-template-name="mqtt out dynamic">
+    <div class="form-row">
+        <label for="node-input-broker"><i class="fa fa-globe"></i> <span data-i18n="mqtt.label.broker"> broker</span></label>
+        <input type="text" id="node-input-broker">
+    </div>
+    <div class="form-row">
+        <label for="node-input-topic"><i class="fa fa-tasks"></i> <span data-i18n="common.label.topic"> topic</span></label>
+        <input type="text" id="node-input-topic" data-i18n="[placeholder]common.label.topic">
+    </div>
+    <div class="form-row">
+        <label for="node-input-qos"><i class="fa fa-empire"></i> <span data-i18n="mqtt.label.qos"> qos</span></label>
+        <select id="node-input-qos" style="width:125px !important">
+            <option value=""></option>
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+        </select>
+        &nbsp;&nbsp;<i class="fa fa-history"></i>&nbsp;<span data-i18n="mqtt.retain"></span> &nbsp;<select id="node-input-retain" style="width:125px !important">
+            <option value=""></option>
+            <option value="false" data-i18n="mqtt.false">false</option>
+            <option value="true" data-i18n="mqtt.true">true</option>
+        </select>
+    </div>
+    <div class="form-row">
+        <label for="node-input-name"><i class="fa fa-tag"></i> <span data-i18n="common.label.name">name</span></label>
+        <input type="text" id="node-input-name" data-i18n="[placeholder]common.label.name">
+    </div>
+    <div class="form-tips"><span data-i18n="mqtt.tip"></span></div>
+</script>
+
+<script type="text/x-red" data-help-name="mqtt out dynamic">
+    <p>Connects to a MQTT broker and publishes messages.</p>
+    <h3>Inputs</h3>
+    <dl class="message-properties">
+       <dt>payload <span class="property-type">string | buffer</span></dt>
+       <dd> most users prefer simple text payloads, but binary buffers can also be published.</dd>
+       <dt class="optional">topic <span class="property-type">string</span></dt>
+       <dd> the MQTT topic to publish to.</dd>
+       <dt class="optional">qos <span class="property-type">number</span></dt>
+       <dd>0, fire and forget - 1, at least once - 2, once and once only. Default 0.</dd>
+       <dt class="optional">retain <span class="property-type">boolean</span></dt>
+       <dd>set to true to retain the message on the broker. Default false.</dd>
+    </dl>
+    <h3>Details</h3>
+    <code>msg.payload</code> is used as the payload of the published message.
+    If it contains an Object it will be converted to a JSON string before being sent.
+    If it contains a binary Buffer the message will be published as-is.</p>
+    <p>The topic used can be configured in the node or, if left blank, can be set by <code>msg.topic</code>.</p>
+    <p>Likewise the QoS and retain values can be configured in the node or, if left
+    blank, set by <code>msg.qos</code> and <code>msg.retain</code> respectively. To clear a previously
+    retained topic from the broker, send a blank message to that topic with the retain flag set.</p>
+    <p>This node requires a connection to a MQTT broker to be configured. This is configured by clicking
+    the pencil icon.</p>
+    <p>Several MQTT nodes (in or out) can share the same broker connection if required.</p>
+</script>
+
+<script type="text/javascript">
+    RED.nodes.registerType('mqtt out dynamic',{
+        category: 'output',
+        defaults: {
+            name: {value:""},
+            topic: {value:""},
+            qos: {value:""},
+            retain: {value:""},
+            broker: {type:"mqtt-broker", required:true}
+        },
+        color:"#d8bfd8",
+        inputs:1,
+        outputs:0,
+        icon: "bridge.png",
+        align: "right",
+        label: function() {
+            return this.name||this.topic||"mqtt";
+        },
+        labelStyle: function() {
+            return this.name?"node_label_italic":"";
+        }
+    });
+</script>

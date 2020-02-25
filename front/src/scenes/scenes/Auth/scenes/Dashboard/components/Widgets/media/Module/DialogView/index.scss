@@ -1,0 +1,16 @@
+@import 'functions.scss';
+
+.wrap {
+    display: flex;
+    flex: 1 1 auto;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    align-content: flex-start;
+}
+
+div.module {
+    padding: calculate-rem(2) calculate-rem(8);
+    position: relative;
+    z-index: 0;
+    height: calculate-rem(200);
+}

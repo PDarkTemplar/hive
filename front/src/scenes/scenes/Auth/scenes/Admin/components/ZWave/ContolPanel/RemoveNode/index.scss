@@ -1,0 +1,25 @@
+@import 'colors.scss';
+@import 'functions.scss';
+
+.icon-wrap {
+    margin-bottom: calculate-rem(14);
+}
+
+.small-icon {
+    @include icon('plus.svg', 22, 22, $light-gray4);
+}
+
+.card {
+    div svg path {
+        fill: $light-gray4;
+        stroke: $light-gray4;
+    }
+
+    div svg {
+        transition: transform 0.5s;
+    }
+
+    &:hover div svg {
+        transform: scale(0.9, 0.9);
+    }
+}

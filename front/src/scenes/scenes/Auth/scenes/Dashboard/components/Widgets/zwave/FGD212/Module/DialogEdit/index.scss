@@ -1,0 +1,10 @@
+@import 'functions.scss';
+
+.wrap {
+    padding: calculate-rem(10);
+}
+
+.settings-wrap {
+    display: flex;
+    flex-flow: column;
+}
