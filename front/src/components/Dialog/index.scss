@@ -1,0 +1,8 @@
+@import 'functions.scss';
+
+div.alert {
+    margin-left: calculate-rem(14);
+    margin-right: calculate-rem(14);
+    width: auto;
+    max-width: calculate-rem(1024);
+}

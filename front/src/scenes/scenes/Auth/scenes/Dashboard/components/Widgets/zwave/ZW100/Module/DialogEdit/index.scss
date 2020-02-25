@@ -1,0 +1,26 @@
+@import 'functions.scss';
+
+.wrap {
+    padding: calculate-rem(10);
+}
+
+.settings-wrap {
+    display: flex;
+    flex-flow: column;
+}
+
+.inline {
+    display: flex;
+    & > div {
+        margin-right: calculate-rem(12);
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+}
+
+.shrink {
+    :global(.bp3-input-group) {
+        flex-shrink: 1;
+    }
+}

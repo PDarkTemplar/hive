@@ -1,0 +1,67 @@
+@import 'functions.scss';
+@import 'colors.scss';
+
+.wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slider-wrap {
+    display: flex;
+    flex-flow: column;
+}
+
+.icon {
+    width: calculate-rem(76);
+    height: calculate-rem(76);
+    fill: $light-gray4;
+    transition: fill 0.3s linear;
+}
+
+.warm {
+    fill: $red4;
+}
+
+.cool {
+    fill: $blue4;
+}
+
+.icon-small {
+    width: calculate-rem(42);
+    height: calculate-rem(42);
+}
+
+.inner-wrap {
+    margin-left: calculate-rem(20);
+    margin-right: calculate-rem(20);
+}
+
+.button-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: calculate-rem(8);
+    margin-bottom: calculate-rem(8);
+}
+
+.speed-small {
+    margin: calculate-rem(10) 0;
+}
+
+.temperature-small {
+    margin: calculate-rem(10) 0;
+    margin-top: 0;
+}
+
+.inner-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+}
+
+label.switch {
+    margin-bottom: 0;
+    margin-left: calculate-rem(24);
+}

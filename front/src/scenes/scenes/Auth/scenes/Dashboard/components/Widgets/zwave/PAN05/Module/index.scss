@@ -1,0 +1,33 @@
+@import 'functions.scss';
+@import 'colors.scss';
+
+.wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon {
+    width: calculate-rem(76);
+    height: calculate-rem(76);
+    fill: $light-gray4;
+}
+
+.icon-small {
+    width: calculate-rem(42);
+    height: calculate-rem(42);
+}
+
+.switch {
+    margin-left: calculate-rem(16);
+    width: calculate-rem(100);
+}
+
+.valve {
+    transition: transform 0.3s linear;
+    transform-origin: center 12.55%;
+}
+
+.valve-open {
+    transform: rotateY(180deg);
+}

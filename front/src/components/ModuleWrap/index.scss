@@ -1,0 +1,24 @@
+@import 'colors.scss';
+@import 'functions.scss';
+
+.wrap {
+    flex: 0 0 auto;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+
+    color: $light-gray4;
+    margin: calculate-rem(8);
+}
+
+.m {
+    width: calculate-rem(128);
+    height: calculate-rem(128);
+}
+
+.s {
+    width: calculate-rem(64);
+    height: calculate-rem(64);
+}

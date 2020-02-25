@@ -1,0 +1,6 @@
+@import 'functions.scss';
+@import 'colors.scss';
+
+.tab-icon {
+    @include icon('logo/zwave.svg', 16, 16, $light-gray4);
+}

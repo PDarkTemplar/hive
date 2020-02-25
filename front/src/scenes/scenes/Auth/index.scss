@@ -1,0 +1,15 @@
+.transition,
+.main-transition {
+    display: flex;
+    flex: 1 1 auto;
+    overflow: hidden;
+}
+.main-transition {
+    position: relative;
+}
+
+.transition {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}

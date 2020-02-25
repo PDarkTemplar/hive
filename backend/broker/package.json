@@ -1,0 +1,24 @@
+{
+  "name": "broker",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "server": "babel-node ./broker.js",
+    "build": "babel ./broker.js --out-file ./broker.build.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "aedes": "^0.40.1",
+    "aedes-persistence-mongodb": "^7.0.1",
+    "jsonwebtoken": "^8.5.1",
+    "websocket-stream": "^5.5.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.1.2",
+    "@babel/core": "^7.1.2",
+    "@babel/node": "^7.0.0",
+    "@babel/preset-env": "^7.1.0"
+  }
+}

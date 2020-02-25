@@ -1,0 +1,32 @@
+@import 'colors.scss';
+@import 'functions.scss';
+
+.icon {
+    margin-right: calculate-rem(14);
+}
+
+.content {
+    padding: calculate-rem(14);
+}
+
+.buttons {
+    margin-top: calculate-rem(12);
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: calculate-rem(14);
+
+    & > * {
+        margin-right: calculate-rem(8);
+        &:first-child {
+            margin-left: calculate-rem(8);
+        }
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+}
+.discard,
+.cancel-two {
+    margin-right: calculate-rem(60);
+}

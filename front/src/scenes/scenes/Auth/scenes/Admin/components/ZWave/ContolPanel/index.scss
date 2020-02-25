@@ -1,0 +1,34 @@
+@import 'colors.scss';
+@import 'functions.scss';
+
+.wrap {
+    margin-bottom: calculate-rem(20);
+    padding-bottom: calculate-rem(20);
+    border-bottom: solid calculate-rem(1) $dark-gray4;
+    display: flex;
+    flex-flow: row wrap;
+    font-size: calculate-rem(14);
+}
+
+.icon-wrap {
+    margin-bottom: calculate-rem(14);
+}
+
+.small-icon {
+    @include icon('reload-kill.svg', 22, 22, $light-gray4);
+}
+
+.card {
+    div svg path {
+        fill: $light-gray4;
+        stroke: $light-gray4;
+    }
+
+    div svg {
+        transition: transform 0.5s;
+    }
+
+    &:hover div svg {
+        transform: scale(0.9, 0.9);
+    }
+}

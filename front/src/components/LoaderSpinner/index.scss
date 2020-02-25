@@ -1,0 +1,47 @@
+@import 'colors.scss';
+@import 'functions.scss';
+
+.retry-wrap {
+    z-index: 99999;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.retry-icon {
+    @include icon('cloud-off.svg', 64, 64, $light-gray4);
+}
+
+.text {
+    color: $light-gray4;
+}
+
+.wrap {
+    z-index: 9999;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex: 1 1 auto;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    user-select: none;
+}
+
+.overlay {
+    background: $black;
+    opacity: 0.5;
+    z-index: 999;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.loader-wrap {
+    z-index: 9999;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+}

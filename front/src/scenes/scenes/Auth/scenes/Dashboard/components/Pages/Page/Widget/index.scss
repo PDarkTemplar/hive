@@ -1,0 +1,129 @@
+@import 'functions.scss';
+@import 'colors.scss';
+
+div.module {
+    margin: 0;
+    padding: calculate-rem(2) calculate-rem(8);
+    position: relative;
+    z-index: 0;
+}
+
+.draggable-wrap {
+    display: flex;
+    flex: 0 0 auto;
+    margin: calculate-rem(10);
+    position: relative;
+}
+
+.drag-handle {
+    cursor: move;
+    background: $dark-gray1;
+    opacity: 0.5;
+    position: absolute;
+    display: flex;
+    width: 100%;
+    min-height: 50%;
+    align-items: center;
+    z-index: 1;
+
+    justify-content: center;
+}
+
+.hidden {
+    opacity: 0;
+}
+
+.appear,
+.enter {
+    opacity: 0;
+    transform: scale(0, 0);
+}
+
+.appear-active,
+.enter-active {
+    transition: opacity 0.2s linear, transform 0.2s linear;
+    opacity: 1;
+    transform: scale(1, 1);
+}
+
+.exit {
+    transition: opacity 0.2s linear, transform 0.2s linear;
+    opacity: 1;
+    transform: scaleX(1, 1);
+}
+
+.exit-active {
+    opacity: 0;
+    transform: scaleX(0, 0);
+}
+
+.remove-node {
+    cursor: pointer;
+    background: $dark-gray1;
+    opacity: 0.7;
+    position: absolute;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    z-index: 1;
+
+    justify-content: center;
+}
+
+.removed {
+    background: $dark-gray1;
+    opacity: 0.7;
+    position: absolute;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+}
+
+.battery {
+    width: calculate-rem(24);
+    height: calculate-rem(24);
+}
+
+.header {
+    width: 100%;
+    height: calculate-rem(31);
+    border-bottom: solid calculate-rem(1) $dark-gray2;
+    padding-top: calculate-rem(4);
+    padding-bottom: calculate-rem(8);
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: calculate-rem(27);
+    border-top: solid calculate-rem(1) $dark-gray2;
+    padding-top: calculate-rem(2);
+}
+
+.battery-outline {
+    fill: $light-gray4;
+}
+
+.battery-fill-start {
+    stop-color: $green3;
+}
+.battery-fill-stop {
+    stop-color: $green1;
+}
+
+.battery-fill {
+    transition: transform 0.3s linear;
+}
+
+.widget {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

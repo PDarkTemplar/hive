@@ -1,0 +1,63 @@
+{
+    "env": {
+        "build": {
+            "presets": [
+                "@babel/preset-typescript",
+                "@babel/react",
+                [
+                    "@babel/preset-env",
+                    {
+                        "exclude": [
+                            "transform-regenerator"
+                        ]
+                    }
+                ]
+            ],
+            "plugins": [
+                [
+                    "@babel/plugin-proposal-decorators",
+                    {
+                        "legacy": true
+                    }
+                ],
+                [
+                    "@babel/plugin-proposal-class-properties",
+                    {
+                        "loose": true
+                    }
+                ],
+                "react-hot-loader/babel"
+            ]
+        },
+        "app": {
+            "presets": [
+                "@babel/preset-typescript",
+                "@babel/react",
+                [
+                    "@babel/preset-env",
+                    {
+                        "exclude": [
+                            "transform-regenerator"
+                        ],
+                        "modules": false
+                    }
+                ]
+            ],
+            "plugins": [
+                [
+                    "@babel/plugin-proposal-decorators",
+                    {
+                        "legacy": true
+                    }
+                ],
+                [
+                    "@babel/plugin-proposal-class-properties",
+                    {
+                        "loose": true
+                    }
+                ],
+                "react-hot-loader/babel"
+            ]
+        }
+    }
+}

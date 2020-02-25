@@ -1,0 +1,21 @@
+@function calculate-rem($px) {
+    @return $px / 16 + rem;
+}
+
+@mixin icon($path, $height, $width, $color: 'none', $isFill: true) {
+    width: calculate-rem($width);
+    height: calculate-rem($height);
+
+    @if $color != 'none' {
+        @if $isFill == true {
+            background-image: svg-load($path, fill=$color);
+        } @else {
+            background-image: svg-load($path, stroke=$color);
+        }
+    } @else {
+        background-image: svg-load($path);
+    }
+
+    background-repeat: no-repeat;
+    background-size: calculate-rem($width), calculate-rem($height);
+}

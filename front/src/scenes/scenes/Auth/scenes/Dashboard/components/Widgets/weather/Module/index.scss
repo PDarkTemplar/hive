@@ -1,0 +1,18 @@
+@import 'functions.scss';
+@import 'colors.scss';
+
+.wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.icon-small {
+    width: calculate-rem(42);
+    height: calculate-rem(42);
+}
+
+.text {
+    margin-left: calculate-rem(5);
+}

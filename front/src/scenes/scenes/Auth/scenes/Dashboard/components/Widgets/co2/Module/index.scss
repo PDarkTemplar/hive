@@ -1,0 +1,46 @@
+@import 'functions.scss';
+@import 'colors.scss';
+
+.wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slider-wrap {
+    display: flex;
+    flex-flow: column;
+}
+
+.icon {
+    width: calculate-rem(76);
+    height: calculate-rem(76);
+    fill: $light-gray4;
+    transition: fill 0.3s linear;
+}
+
+.alarm {
+    fill: $red4;
+}
+
+.warning {
+    fill: $orange4;
+}
+
+.normal {
+    fill: $light-gray4;
+}
+
+.icon-small {
+    width: calculate-rem(42);
+    height: calculate-rem(42);
+}
+
+.inner-wrap {
+    margin-left: calculate-rem(20);
+    margin-right: calculate-rem(20);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+}

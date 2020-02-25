@@ -1,0 +1,25 @@
+@import 'functions.scss';
+@import 'colors.scss';
+
+.icon {
+    width: calculate-rem(76);
+    height: calculate-rem(76);
+    stroke: $light-gray4;
+    fill: $light-gray4;
+}
+
+.icon-small {
+    width: calculate-rem(42);
+    height: calculate-rem(42);
+}
+
+.drop {
+    transform: translateY(0);
+}
+
+.leak {
+    animation: leakKey linear infinite;
+    animation-duration: 0.7s;
+}
+
+@keyframes leakKey { 100% {transform:translateY(300px); } }

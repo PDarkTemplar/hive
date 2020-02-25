@@ -1,0 +1,9 @@
+@import 'functions.scss';
+
+.wrap {
+    margin-top: calculate-rem(20);
+
+    :global(.bp3-input.bp3-tag-input.bp3-multi-select) {
+        padding-top: calculate-rem(1);
+    }
+}
